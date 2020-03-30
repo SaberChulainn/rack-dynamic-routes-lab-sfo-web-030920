@@ -6,7 +6,7 @@ class Application
     
     if req.path.match(/items/)
     items_name = req.path.split("/items/").last 
-      item = Item.find{|i| i.title == items_name}
+      item = Item.all.find{|i| i.title == items_name}
       resp.write item.price
       resp.status = 200
     else
