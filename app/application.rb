@@ -7,6 +7,7 @@ class Application
     if req.path.match(/item/)
       item = 
     else
+      resp.write "400"
   end
   
   
